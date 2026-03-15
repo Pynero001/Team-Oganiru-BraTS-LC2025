@@ -27,9 +27,10 @@ The BraTS dataset contains **multi-modal MRI scans**, including:
 
 The goal is to segment tumor subregions:
 
-* Enhancing Tumor (ET)
-* Tumor Core (TC)
-* Whole Tumor (WT)
+* Background (0): Normal brain tissue.
+* NCR (1): Necrotic and Non-Enhancing Tumor Core — The dead part of the tumor, usually appearing in the center.
+* ED (2): Peritumoral Edema / Infiltrated Tissue — Swelling and fluid around the tumor, often caused by the tumor infiltrating surrounding healthy tissue.
+* ET (3): Enhancing Tumor — The active part of the tumor that takes up contrast agent, typically visible on contrast-enhanced MRI (T1-Gd).
 
 ---
 
@@ -108,6 +109,8 @@ Key libraries:
 * MONAI
 * medpy
 * numpy
+* os
+* shutil
   
 
 # Acknowledgements
@@ -117,4 +120,3 @@ Key libraries:
 * nnU-Net developers
 
 ---
-
